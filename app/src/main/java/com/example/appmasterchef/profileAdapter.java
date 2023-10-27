@@ -43,8 +43,10 @@ public class profileAdapter extends BaseAdapter {
 
         TextView txtTen = (TextView) view.findViewById(R.id.textviewTen);
         ImageView imgHinh = (ImageView) view.findViewById(R.id.imgviewhinh);
+        TextView txtMsv=(TextView) view.findViewById(R.id.textviewmsv);
         profile profile=profileList.get(i);
         txtTen.setText(profile.getTen());
+        txtMsv.setText(profile.getMsv());
         imgHinh.setImageResource(profile.getHinh());
 
 

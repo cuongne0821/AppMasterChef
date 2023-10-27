@@ -2,11 +2,21 @@ package com.example.appmasterchef;
 
 public class profile {
     private String Ten;
+    private String Msv;
     private int Hinh;
 
-    public profile(String ten, int hinh) {
+    public profile(String ten, int hinh, String msv) {
         Ten = ten;
         Hinh = hinh;
+        Msv=msv;
+    }
+
+    public String getMsv() {
+        return Msv;
+    }
+
+    public void setMsv(String msv) {
+        Msv = msv;
     }
 
     public String getTen() {
