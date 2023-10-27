@@ -28,9 +28,9 @@ public class Service_Fragment extends Fragment {
         arrayprofile = new ArrayList<>();
 
         arrayprofile.add (new profile("Phạm Quốc Cường",R.drawable.img_12,"21115053120204"));
-        arrayprofile.add (new profile("Phạm Hồng Sơn",R.drawable.img_12,"21115053120204"));
-        arrayprofile.add (new profile("Nguyễn Quang Quý",R.drawable.img_12,"21115053120204"));
-        arrayprofile.add (new profile("Mai Thanh Tùng",R.drawable.img_12,"21115053120204"));
+        arrayprofile.add (new profile("Phạm Hồng Sơn",R.drawable.img_12,"21115053120242"));
+        arrayprofile.add (new profile("Nguyễn Quang Quý",R.drawable.img_12,"21115053120238"));
+        arrayprofile.add (new profile("Mai Thanh Tùng",R.drawable.img_12,"21115053120257"));
 
         adapter = new profileAdapter(getActivity(),R.layout.profile,arrayprofile);
         lvprofile.setAdapter(adapter);
