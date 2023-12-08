@@ -15,12 +15,12 @@
         >
 
         <ImageView
+            android:id="@+id/imgview"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:id="@+id/imgview"
-            android:scaleType="fitXY"
             android:background="@drawable/radius_img_btn"
-            />
+            android:scaleType="fitXY" />
+
         <TextView
             android:id="@+id/tv_ten"
             android:layout_width="180dp"

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "472981297451",
+    "firebase_url": "https://masterchef-2fcce-default-rtdb.firebaseio.com",
+    "project_id": "masterchef-2fcce",
+    "storage_bucket": "masterchef-2fcce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472981297451:android:c1da86245337115b144d6e",
+        "android_client_info": {
+          "package_name": "com.example.appmasterchef"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWBd7ig5ci1ztygvqDxKwH64Qp0XP0JOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

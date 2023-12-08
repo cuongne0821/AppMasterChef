@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Category_Fragment categoryfragment=new Category_Fragment();
     Favorite_Fragment favoriteFragment= new Favorite_Fragment();
     Service_Fragment serviceFragment = new Service_Fragment();
-    RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void anhxa() {
         bottomNavigationView=(BottomNavigationView) findViewById(R.id.bottom_nav);
-        recyclerView=(RecyclerView) findViewById(R.id.recycler_view);
+
 
     }
 }

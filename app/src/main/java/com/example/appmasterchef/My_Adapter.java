@@ -1,83 +1,79 @@
 package com.example.appmasterchef;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import java.util.List;
-
-public class My_Adapter extends  RecyclerView.Adapter<My_Adapter.ViewHolder>{
-    private List<Mydata> dataList;
-    private OnItemClickListener listener;
-    public My_Adapter(List<Mydata> dataList, OnItemClickListener listener) {
-
-        this.dataList = dataList;
-        this.listener=listener;
+public class My_Adapter extends FirebaseRecyclerAdapter<Mydata, My_Adapter.myViewHolder> {
+    /**
+     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
+     * {@link FirebaseRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public My_Adapter(@NonNull FirebaseRecyclerOptions<Mydata> options) {
+        super(options);
     }
-
-    public void setFilteredList(List<Mydata> filteredList){
-        this.dataList=filteredList;
-        notifyDataSetChanged();
-    }
-
 
     @Override
-    public int getItemCount() {
-        return dataList.size();
+    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull Mydata model) {
+        holder.tv.setText(model.getName());
+        Glide.with(holder.img.getContext())
+                .load(model.getImage())
+                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
+                .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
+                .into(holder.img);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClick(model);
+                }
+            }
+        });
     }
-
-
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Mydata data = dataList.get(position);
-        holder.nameTextView.setText(data.getTen());
-        // Sử dụng Glide để tải và hiển thị hình ảnh
-        Glide.with(holder.itemView.getContext())
-                .load(data.getImage())
-                .into(holder.imageView);
+    public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
+        return new myViewHolder(view);
     }
 
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nameTextView;
-        ImageView imageView;
+    public class myViewHolder extends RecyclerView.ViewHolder{
+        ImageView img;
+        TextView tv;
 
-        public ViewHolder(@NonNull View itemView) {
+        public myViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTextView = itemView.findViewById(R.id.tv_ten);
-            imageView = itemView.findViewById(R.id.imgview);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    if (position != RecyclerView.NO_POSITION) {
-                        Mydata data = dataList.get(position);
-                        listener.onItemClick(data);
-                    }
-                }
-            });
+            img=(ImageView) itemView.findViewById(R.id.imgview);
+            tv=(TextView) itemView.findViewById(R.id.tv_ten);
         }
     }
-
     public interface OnItemClickListener {
         void onItemClick(Mydata data);
     }
+
+    private OnItemClickListener listener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
 
 
 }

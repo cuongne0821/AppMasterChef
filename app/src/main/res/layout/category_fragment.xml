@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Category_Fragment">
@@ -33,226 +35,188 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="649dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints"
-        android:background="#C5C3C3"
-        tools:layout_editor_absoluteX="1dp">
-
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#CCC6C6">
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/white"
-                android:layout_marginTop="15dp">
-
-                <ImageButton
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
                     android:id="@+id/btnCanh"
-                    android:onClick="goToCanhDetail"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/danhmuc_canh"
-                    tools:layout_editor_absoluteX="16dp" />
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/white"
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="100dp"
-                    android:gravity="center"
-                    android:text="Món canh"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                    >
+                    <ImageView
+                        android:id="@+id/imgViewcanh"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/danhmuc_canh"
+                        android:scaleType="fitXY"
+                        android:padding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvTencanh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewcanh"
+                        android:layout_marginTop="20dp"
+                        android:text="Món Canh "
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:textColor="#A63131"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewcanh"
+                        android:layout_below="@+id/tvTencanh"
+                        android:layout_marginTop="20dp"
+                        android:text="Số lượng : 2"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="28dp"
-                    android:text="Số lượng món: 2"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
 
+                </RelativeLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <RelativeLayout
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:layout_height="150dp">
-
-                <ImageButton
                     android:id="@+id/btnNuong"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/monnuong"
-                    tools:layout_editor_absoluteX="16dp" />
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/white"
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="84dp"
-                    android:gravity="center"
-                    android:text="Món nướng"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    >
+                    <ImageView
+                        android:id="@+id/imgViewnuong"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/monnuong"
+                        android:scaleType="fitXY"
+                        android:padding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvTennuong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewnuong"
+                        android:layout_marginTop="20dp"
+                        android:text="Món Nướng "
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:textColor="#A63131"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewnuong"
+                        android:layout_below="@+id/tvTennuong"
+                        android:layout_marginTop="20dp"
+                        android:text="Số lượng : 2"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="28dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Số lượng món: 2"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:layout_height="150dp">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btnXao"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/white"
 
-                <ImageButton
-                    android:id="@+id/btnChien"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/monchien"
-                    tools:layout_editor_absoluteX="16dp" />
+                    >
+                    <ImageView
+                        android:id="@+id/imgViewxao"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/monbo"
+                        android:scaleType="fitXY"
+                        android:padding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvTenxao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewxao"
+                        android:layout_marginTop="20dp"
+                        android:text="Món Xào "
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:textColor="#A63131"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewxao"
+                        android:layout_below="@+id/tvTenxao"
+                        android:layout_marginTop="20dp"
+                        android:text="Số lượng : 2"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="92dp"
-                    android:gravity="center"
-                    android:text="Món chiên"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="28dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Số lượng món: 2"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:layout_height="150dp">
-
-                <ImageButton
+                </RelativeLayout>
+                <RelativeLayout
                     android:id="@+id/btnChay"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/monchay"
-                    tools:layout_editor_absoluteX="16dp" />
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/white"
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="100dp"
-                    android:gravity="center"
-                    android:text="Món chay"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="28dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Số lượng món: 2"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:layout_marginBottom="30dp"
-                android:layout_height="150dp">
-
-                <ImageButton
-                    android:id="@+id/btnBo"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="30dp"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/monbo"
-                    tools:layout_editor_absoluteX="16dp" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="48dp"
-                    android:gravity="center"
-                    android:text="Món về thịt bò"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="28dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Số lượng món: 2"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-    </ScrollView>
+                    >
+                    <ImageView
+                        android:id="@+id/imgViewChay"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/monchay"
+                        android:scaleType="fitXY"
+                        android:padding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvTenChay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewChay"
+                        android:layout_marginTop="20dp"
+                        android:text="Món Chay "
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:textColor="#A63131"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgViewChay"
+                        android:layout_below="@+id/tvTenChay"
+                        android:layout_marginTop="20dp"
+                        android:text="Số lượng : 2"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

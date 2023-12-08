@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,21 @@
         android:theme="@style/Theme.AppMasterChef"
         tools:targetApi="31">
         <activity
-
+            android:name=".Category_Chay"
+            android:exported="false" />
+        <activity
+            android:name=".Category_Xao"
+            android:exported="false" />
+        <activity
+            android:name=".Category_Nuong"
+            android:exported="false" />
+        <activity
+            android:name=".DetailsCategory_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".canh"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="true">
             <intent-filter>
@@ -24,14 +39,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:exported="true"/>
-        <activity android:name=".details_category"
-            android:exported="true"/>
-        <activity android:name=".Canhgheraumuong_Moncanh"
-            android:exported="true"/>
-        <activity android:name=".register"
-            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Canhgheraumuong_Moncanh"
+            android:exported="true" />
+        <activity
+            android:name=".register"
+            android:exported="true" />
     </application>
 
 </manifest>

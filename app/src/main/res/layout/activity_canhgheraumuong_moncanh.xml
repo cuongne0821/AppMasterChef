@@ -12,7 +12,7 @@
         android:layout_height="80dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewct"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -71,14 +71,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <EditText
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="74dp"
-                android:text="Canh ghẹ rau muống thanh mát, ngọt lành"
-
-                android:textSize="22dp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -90,9 +82,9 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tvNL"
                 android:layout_width="match_parent"
-                android:layout_height="85dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="
 - Ghẹ tươi: 3 con (khoảng 600 – 800g)\n
@@ -102,10 +94,10 @@
                 android:textSize="15dp" />
 
             <ImageView
+                android:id="@+id/imgHD"
                 android:layout_width="match_parent"
                 android:layout_height="268dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/canhghe" />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -117,9 +109,9 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/tvHD"
                 android:layout_width="match_parent"
-                android:layout_height="234dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="- Bắc nồi lên bếp, thêm vào 1 muỗng canh dầu ăn rồi cho hành tím băm nhỏ vào phi vàng. Khi hành đã dậy mùi thơm, nhanh tay cho ghẹ vào xào, nêm vào 1 muỗng cà phê hạt nêm. Ở bước này, nếu có gạch thì bạn cho gạch vào xào trước rồi sau đó mới cho ghẹ.\n\n
 
@@ -128,11 +120,6 @@
   "
                 android:textSize="15dp" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="268dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/canhghe1" />
         </LinearLayout>
 
     </ScrollView>
