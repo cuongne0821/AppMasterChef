@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Details_Favorite">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#7F3333"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/textViewct"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Canh ghẹ rau muống"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnNote"
+            app:layout_constraintHorizontal_bias="0.432"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/btnNote"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:background="#7F3333"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.466"
+            app:srcCompat="@drawable/note" />
+
+        <ToggleButton
+            android:id="@+id/btnLove"
+            android:layout_width="32dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="56dp"
+            android:background="@drawable/loveon"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.511" />
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="41dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="NGUYÊN LIỆU:"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="
+- Ghẹ tươi: 3 con (khoảng 600 – 800g)\n
+- Rau muống: 1 bó\n
+- Hành tím: 2 củ\n
+- Gia vị: hạt nêm, bột ngọt, nước mắm, muối, dầu ăn"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/imgHD"
+                android:layout_width="match_parent"
+                android:layout_height="268dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="HƯỚNG DẪN LÀM:"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="- Bắc nồi lên bếp, thêm vào 1 muỗng canh dầu ăn rồi cho hành tím băm nhỏ vào phi vàng. Khi hành đã dậy mùi thơm, nhanh tay cho ghẹ vào xào, nêm vào 1 muỗng cà phê hạt nêm. Ở bước này, nếu có gạch thì bạn cho gạch vào xào trước rồi sau đó mới cho ghẹ.\n\n
+
+- Xào đến khi ghẹ chuyển sang màu đỏ thì cho vào nồi một lượng nước đủ dùng, mở lửa lớn. Khi nước sôi và thịt ghẹ đã chín, nêm nếm lại với nước mắm, hạt nêm cho vừa miệng.\n\n
+- Cho rau muống vào, đợi nước sôi lại nêm thêm 1/2 muỗng cà phê bột ngọt rồi tắt bếp.
+  "
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
