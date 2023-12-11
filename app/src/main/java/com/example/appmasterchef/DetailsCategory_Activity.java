@@ -49,7 +49,7 @@ public class DetailsCategory_Activity extends AppCompatActivity {
     }
     public void onItemClick(Mydata data) {
         // Chuyển sang trang mới khi mục được nhấn vào
-        Intent intent = new Intent(DetailsCategory_Activity.this, Canhgheraumuong_Moncanh.class);
+        Intent intent = new Intent(DetailsCategory_Activity.this, Details_Food.class);
         Bundle bd=new Bundle();
         bd.putString("ten",data.getName());
         bd.putString("huongdan",data.getHD());

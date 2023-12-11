@@ -8,20 +8,20 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="410dp"
-        android:layout_height="210dp"
+        android:layout_width="392dp"
+        android:layout_height="238dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logomasterchef" />
+        app:srcCompat="@drawable/logomasterchef"/>
 
     <Button
-        android:id="@+id/login1"
+        android:id="@+id/login_button"
         android:layout_width="158dp"
         android:layout_height="60dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/customer_button"
         android:text="Đăng nhập"
         android:textSize="18dp"
@@ -40,21 +40,21 @@
         android:textColor="#7F3333"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u" />
+        app:layout_constraintTop_toBottomOf="@+id/login_username"/>
 
     <TextView
-        android:id="@+id/dangky"
+        android:id="@+id/signupRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="12dp"
         android:text="Đăng kí"
         android:textColor="#7F3333"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <TextView
         android:id="@+id/textView6"
@@ -66,10 +66,10 @@
         android:textColor="#7F3333"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <EditText
-        android:id="@+id/p"
+        android:id="@+id/login_password"
         android:layout_width="212dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
@@ -78,7 +78,7 @@
         android:inputType="textPassword"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -91,12 +91,12 @@
         android:textColor="#7F3333"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/u"
+        android:id="@+id/login_username"
         android:layout_width="212dp"
         android:layout_height="43dp"
         android:layout_marginTop="12dp"
@@ -105,7 +105,7 @@
         android:inputType="textPersonName"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -118,7 +118,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login1"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
         app:srcCompat="@drawable/fb" />
 
     <ImageView
@@ -132,7 +132,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/login1"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/itg" />
 
@@ -144,7 +144,7 @@
         android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/login1"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
         app:srcCompat="@drawable/gmail" />
 
 

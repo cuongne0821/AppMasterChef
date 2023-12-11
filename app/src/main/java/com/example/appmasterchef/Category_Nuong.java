@@ -20,7 +20,7 @@ public class Category_Nuong extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.details_category);
+        setContentView(R.layout.activity_category_nuong);
         rcv=(RecyclerView) findViewById(R.id.recycler_view);
         rcv.setLayoutManager(new GridLayoutManager(this, 2));
 
@@ -49,7 +49,7 @@ public class Category_Nuong extends AppCompatActivity {
     }
     public void onItemClick(Mydata data) {
         // Chuyển sang trang mới khi mục được nhấn vào
-        Intent intent = new Intent(Category_Nuong.this, Canhgheraumuong_Moncanh.class);
+        Intent intent = new Intent(Category_Nuong.this, Details_Food.class);
         Bundle bd=new Bundle();
         bd.putString("ten",data.getName());
         bd.putString("huongdan",data.getHD());

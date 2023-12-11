@@ -31,8 +31,6 @@ public class My_Adapter extends FirebaseRecyclerAdapter<Mydata, My_Adapter.myVie
         holder.tv.setText(model.getName());
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
-                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
-                .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

@@ -5,17 +5,27 @@ public class Mydata {
 
         private String  Name;
         private String Image, HD,Nguyenlieu, Danhmuc;
+        private boolean isFavorite;
 
 
 
         Mydata(){}
 
-    public Mydata(String name, String image, String HD, String nguyenlieu, String danhmuc) {
+    public Mydata(String name, String image, String HD, String nguyenlieu, String danhmuc, boolean isFavorite) {
         Name = name;
         Image = image;
         this.HD = HD;
         Nguyenlieu = nguyenlieu;
         Danhmuc = danhmuc;
+        this.isFavorite = isFavorite;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
     }
 
     public String getDanhmuc() {

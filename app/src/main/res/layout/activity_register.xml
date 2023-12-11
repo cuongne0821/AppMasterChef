@@ -9,6 +9,7 @@
         android:id="@+id/imageView"
         android:layout_width="392dp"
         android:layout_height="238dp"
+
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
@@ -17,7 +18,7 @@
         app:srcCompat="@drawable/logomasterchef" />
 
     <EditText
-        android:id="@+id/p1"
+        android:id="@+id/singup_password1"
         android:layout_width="214dp"
         android:layout_height="41dp"
         android:layout_marginTop="28dp"
@@ -41,10 +42,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p" />
+        app:layout_constraintTop_toBottomOf="@+id/singup_password" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/signup_button"
         android:layout_width="121dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
@@ -54,10 +55,10 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1" />
+        app:layout_constraintTop_toBottomOf="@+id/singup_password1" />
 
     <TextView
-        android:id="@+id/dangnhap"
+        android:id="@+id/loginRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -70,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/signup_button"
         app:layout_constraintVertical_bias="0.272" />
 
     <TextView
@@ -85,10 +86,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u" />
+        app:layout_constraintTop_toBottomOf="@+id/signp_username" />
 
     <EditText
-        android:id="@+id/p"
+        android:id="@+id/singup_password"
         android:layout_width="212dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
@@ -115,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/u"
+        android:id="@+id/signp_username"
         android:layout_width="212dp"
         android:layout_height="43dp"
         android:layout_marginTop="12dp"
