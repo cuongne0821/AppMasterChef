@@ -33,6 +33,7 @@ public class My_Adapter extends FirebaseRecyclerAdapter<Mydata, My_Adapter.myVie
                 .load(model.getImage())
                 .into(holder.img);
 
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

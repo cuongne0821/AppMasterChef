@@ -94,6 +94,7 @@ public class Home_Fragment extends Fragment {
                 .build();
 
         adapter.updateOptions(options);
+        adapter.notifyDataSetChanged();
 
     }
     public void onItemClick(Mydata data) {
