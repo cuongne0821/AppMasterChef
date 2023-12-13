@@ -31,7 +31,6 @@ public class Details_Food extends AppCompatActivity {
     ToggleButton imgbtn;
     private DatabaseReference databaseRef;
 
-    private boolean isFavorite = false; // Thêm biến để theo dõi trạng thái yêu thích
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +78,7 @@ public class Details_Food extends AppCompatActivity {
             imgbtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked && !isFavorite) {
+                    if (isChecked ) {
 
 
                             // Kiểm tra xem dữ liệu yêu thích đã tồn tại hay chưa
@@ -89,6 +88,7 @@ public class Details_Food extends AppCompatActivity {
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                     if (dataSnapshot.exists()) {
                                         // Dữ liệu yêu thích đã tồn tại
+
 
                                     } else {
                                         // Dữ liệu yêu thích không tồn tại
@@ -103,8 +103,7 @@ public class Details_Food extends AppCompatActivity {
 
 
                                         imgbtn.setBackgroundResource(R.drawable.loveon);
-
-                                         // Đánh dấu là đã yêu thích
+                                        Toast.makeText(Details_Food.this, "Đã thêm vào yêu thích!", Toast.LENGTH_SHORT).show();
 
                                     }
                                 }
@@ -114,28 +113,13 @@ public class Details_Food extends AppCompatActivity {
                                     // Xử lý lỗi nếu cần
                                 }
                             });
-
-                        isFavorite = true;
-
                     } else{
-
-
-
+                        Toast.makeText(Details_Food.this, "Đã tồn tại !", Toast.LENGTH_SHORT).show();
                         imgbtn.setBackgroundResource(R.drawable.love);
-
-                        isFavorite = false; // Đánh dấu là không yêu thích
                     }
                 }
 
-
-
-
             });
-
-
         }
-
-
     }
-
 }

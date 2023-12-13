@@ -42,6 +42,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 if (validateUsername() && validatePassword()) {
                     checkUser();
+                    Toast.makeText(Login.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

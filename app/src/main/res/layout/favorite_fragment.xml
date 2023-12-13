@@ -10,6 +10,8 @@
     >
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -21,20 +23,19 @@
         <ImageView
             android:layout_width="75dp"
             android:layout_height="60dp"
-            android:src="@drawable/logo_masterchef"
+            android:layout_margin="8dp"
             android:scaleType="fitXY"
-            android:layout_margin="8dp"/>
+            android:src="@drawable/logo_masterchef" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yêu thích"
-            android:textSize="30sp"
-            android:textStyle="bold|italic"
-            android:layout_marginLeft="55dp"
+            android:layout_marginLeft="40dp"
+            android:text="Danh sách yêu thích"
             android:textColor="@color/white"
-            />
+            android:textSize="25dp"
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

@@ -31,10 +31,10 @@
             android:layout_height="30dp"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="20dp"
-            android:text="Cá Nhân"
+            android:text="Nhóm 7"
             android:textColor="@color/white"
             android:textSize="25dp"
-            android:textStyle="bold|italic"/>
+            android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>
 
     <ListView

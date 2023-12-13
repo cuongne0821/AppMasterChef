@@ -28,10 +28,10 @@
             android:ems="20"
             android:gravity="center"
             android:paddingRight="40dp"
-            android:text="Danh mục"
+            android:text="Danh mục món ăn"
             android:textColor="@color/white"
-            android:textSize="23dp"
-            android:textStyle="bold|italic" />
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -52,7 +52,7 @@
                     android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@color/white"
+                    android:background="@drawable/rounded_border"
 
                     >
                     <ImageView
@@ -62,6 +62,7 @@
                         android:src="@drawable/danhmuc_canh"
                         android:scaleType="fitXY"
                         android:padding="10dp"
+
                         />
                     <TextView
                         android:id="@+id/tvTencanh"
@@ -95,7 +96,7 @@
                     android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@color/white"
+                    android:background="@drawable/rounded_border"
 
                     >
                     <ImageView
@@ -123,7 +124,7 @@
                         android:layout_toRightOf="@+id/imgViewnuong"
                         android:layout_below="@+id/tvTennuong"
                         android:layout_marginTop="20dp"
-                        android:text="Số lượng : 2"
+                        android:text="Số lượng : 3"
                         android:textStyle="bold"
                         android:gravity="center"
                         android:textSize="20sp"
@@ -136,7 +137,7 @@
                     android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@color/white"
+                    android:background="@drawable/rounded_border"
 
                     >
                     <ImageView
@@ -164,7 +165,7 @@
                         android:layout_toRightOf="@+id/imgViewxao"
                         android:layout_below="@+id/tvTenxao"
                         android:layout_marginTop="20dp"
-                        android:text="Số lượng : 2"
+                        android:text="Số lượng : 4"
                         android:textStyle="bold"
                         android:gravity="center"
                         android:textSize="20sp"
@@ -177,7 +178,7 @@
                     android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@color/white"
+                    android:background="@drawable/rounded_border"
 
                     >
                     <ImageView

@@ -86,7 +86,9 @@ public class Details_Favorite extends AppCompatActivity {
                                     // Dữ liệu yêu thích đã tồn tại
                                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                         snapshot.getRef().removeValue();
-                                        imgbtn.setBackgroundResource(R.drawable.love);}
+                                        imgbtn.setBackgroundResource(R.drawable.love);
+                                        Toast.makeText(Details_Favorite.this, "Đã hủy yêu thích!", Toast.LENGTH_SHORT).show();
+                                    }
 
 
                                 } else {
