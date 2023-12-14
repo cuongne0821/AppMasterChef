@@ -26,7 +26,7 @@ public class Details_Favorite extends AppCompatActivity {
     ToggleButton imgbtn;
     private Task<Void> databaseRef;
 
-    private boolean isFavorite = false; // Thêm biến để theo dõi trạng thái yêu thích
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +74,7 @@ public class Details_Favorite extends AppCompatActivity {
             imgbtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked && !isFavorite) {
+                    if (isChecked) {
 
 
                         // Kiểm tra xem dữ liệu yêu thích đã tồn tại hay chưa
@@ -90,12 +90,7 @@ public class Details_Favorite extends AppCompatActivity {
                                         Toast.makeText(Details_Favorite.this, "Đã hủy yêu thích!", Toast.LENGTH_SHORT).show();
                                     }
 
-
                                 } else {
-                                    // Dữ liệu yêu thích không tồn tại
-
-
-
 
                                 }
                             }
@@ -106,15 +101,11 @@ public class Details_Favorite extends AppCompatActivity {
                             }
                         });
 
-                        isFavorite = true;
 
                     } else{
 
-
-
                         imgbtn.setBackgroundResource(R.drawable.love);
 
-                        isFavorite = false; // Đánh dấu là không yêu thích
                     }
                 }
 

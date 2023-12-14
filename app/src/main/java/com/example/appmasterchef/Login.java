@@ -42,7 +42,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 if (validateUsername() && validatePassword()) {
                     checkUser();
-                    Toast.makeText(Login.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
@@ -91,6 +91,7 @@ public class Login extends AppCompatActivity {
                     String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
                     if (passwordFromDB != null && passwordFromDB.equals(userPassword)) {
                         loginPassword.setError(null);
+                        Toast.makeText(Login.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Login.this, MainActivity.class);
                         startActivity(intent);
                     } else {
